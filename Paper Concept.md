@@ -66,3 +66,12 @@ The LLM is trained or prompted with:
 - A new framework for **judgment-based reward modeling using LLMs**.
 - Demonstration of **LLM + RL hybrid control loop** in high-fidelity robotic simulation.
 - Enhanced **sample efficiency and behavior robustness** in swarm learning.
+
+## System Architecture
+
+[Isaac Sim] → [RL Agent (e.g., PPO, SAC)] → [Robot Action]
+                             ↑
+     [State, Action, Env Info]  
+                             ↓
+                  [LLM Reward Agent]
+         (Analyzes behavior, suggests reward/penalty)
